@@ -68,7 +68,7 @@ def display_stroop_effect_plot():
     Function to generate a bar plot to display the Congruent and Incongruent data in plot
     :return: None
     """
-    ax = stroop_effect_df.plot.bar()
+    ax = stroop_effect_df.plot.box()
     ax.set_title('Stroop Effect plot')
     ax.set_xlabel('Test Subject')
     ax.set_ylabel('Response Time')

@@ -17,6 +17,9 @@ print("square:length:{}".format(len(squares)))
 # todo: populate "squares" with the set of all of the integers less
 # than 2000 that are square numbers
 
+for sq in squares:
+    print(sq)
+
 
 # Note: If you want to call the nearest_square function, you must define
 # the function on a line before you call it. Feel free to move this code up!
