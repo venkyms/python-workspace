@@ -75,3 +75,27 @@ def max_employment(countries, employment):
 
 
 print(max_employment(countries, employment))
+
+# Change this country name to change what country will be printed when you
+# click "Test Run". Your function will be called to determine the standardized
+# score for this country for each of the given 5 Gapminder variables in 2007.
+# The possible country names are available in the Downloadables section.
+
+country_name = 'United States'
+
+
+def standardize_data(values):
+    '''
+    Fill in this function to return a standardized version of the given values,
+    which will be in a NumPy array. Each value should be translated into the
+    number of standard deviations that value is away from the mean of the data.
+    (A positive number indicates a value higher than the mean, and a negative
+    number indicates a value lower than the mean.)
+    '''
+    # standardize using vector operation, operates on entire array without loop
+    # instead of value - values.mean, runs same on all value in array
+    standardize_values = (values - values.mean()) / values.std()
+    return standardize_values
+
+
+print(standardize_data(employment))
