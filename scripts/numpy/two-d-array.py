@@ -64,7 +64,7 @@ def mean_riders_for_max_station(ridership):
     return (overall_mean, mean_for_max)
 
 
-print('mean_rides_for_max_station'.format(mean_riders_for_max_station(ridership)))
+print('mean_rides_for_max_station:{}'.format(mean_riders_for_max_station(ridership)))
 
 
 def min_and_max_riders_per_day(ridership):
@@ -75,10 +75,14 @@ def min_and_max_riders_per_day(ridership):
     mean-ridership-per-day and the minimum mean-ridership-per-day for any
     subway station.
     '''
-    max_daily_ridership = None  # Replace this with your code
-    min_daily_ridership = None  # Replace this with your code
+    mean_ridership = ridership.mean(axis=0)
+
+    print('mean_ridership:{}'.format(mean_ridership))
+
+    max_daily_ridership = mean_ridership.max()
+    min_daily_ridership = mean_ridership.min()
 
     return (max_daily_ridership, min_daily_ridership)
 
 
-print('min_and_max_riders_per_day'.format(min_and_max_riders_per_day(ridership)))
+print('min_and_max_riders_per_day:{}'.format(min_and_max_riders_per_day(ridership)))

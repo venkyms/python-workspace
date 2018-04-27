@@ -7,10 +7,8 @@ import pandas as pd
 if False:
     s = pd.Series([1, 2, 3, 4, 5])
 
-
     def add_one(x):
         return x + 1
-
 
     print(s.apply(add_one))
 

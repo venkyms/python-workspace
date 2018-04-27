@@ -59,7 +59,7 @@ def perform_statistical_analysis():
 
     # Got the t-critical value from t-table manually
     degrees_of_freedom = n - 1
-    t_critical = 1.714
+    t_critical = 2.069
     print('t-critical value at 95% confidence level and DF at {} is: +or-{}'.format(degrees_of_freedom, t_critical))
 
 
@@ -75,7 +75,7 @@ def display_stroop_effect_plot():
     plt.show()
 
 
-stroop_effect_df = pd.read_csv('../../data/stroopdata.csv')
+stroop_effect_df = pd.read_csv('data/stroopdata.csv')
 print(stroop_effect_df)
 calculate_discriptive_statistics_data('Congruent')
 calculate_discriptive_statistics_data('Incongruent')
